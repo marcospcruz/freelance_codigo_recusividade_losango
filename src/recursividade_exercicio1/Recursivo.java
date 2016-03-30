@@ -1,13 +1,17 @@
 package recursividade_exercicio1;
 
 public class Recursivo {
+
 	private int linha = 0; // contador de linhas
+
 	private int n; // total de repetições passado pelo usuário
-	// private int limiteLinha;
+
 	private boolean decrementaLinha;
 
 	public static void main(String args[]) {
+
 		new Recursivo().desenhaLosango(10);
+
 	}
 
 	private void desenhaLosango(int n) {
@@ -25,16 +29,12 @@ public class Recursivo {
 
 		setN(n);
 
-		// if (limiteLinha == 0)
-		// limiteLinha = n - 1;
-
 		while (linha >= 0) {
-			// int limiteDaLinha = limiteLinha - linha;
+
 			int limiteDaLinha = this.n - linha;
-			// for (int i = 0; i <= limiteLinha + linha; i++) {
+
 			for (int i = 0; i <= this.n + linha; i++) {
 
-				// if (i < (limiteDaLinha) || i > limiteLinha + linha) {
 				if (i < (limiteDaLinha) || i > this.n + linha) {
 					System.out.print(" ");
 				} else {
@@ -51,10 +51,7 @@ public class Recursivo {
 
 			}
 			System.out.println();
-			// System.out.println("linha:" + linha);
-			// System.out.println("marcadorColuna:" + marcaLosango);
 
-			// if (linha == limiteLinha)
 			if (linha == this.n - 1)
 				this.decrementaLinha = true;
 
