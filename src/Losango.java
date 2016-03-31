@@ -1,6 +1,4 @@
-package recursividade_exercicio1;
-
-public class Recursivo {
+public class Losango {
 
 	private int linha = 0; // contador de linhas
 
@@ -11,16 +9,25 @@ public class Recursivo {
 
 	public static void main(String args[]) {
 
-		int numero = 9;
+		try {
+			int numero = new Integer(args[0]);
+			// validação de entrada de valores para limitar valores entre 1 e
+			// 9.
+			if (numero < 0 || numero > 9) {
 
-		// validação de entrada de valores para limitar valores entre 1 e 9.
-		if (numero < 0 || numero > 9) {
+				System.out.println("Tamanho inválido. Informar de 1 a 9!");
+				return;
 
-			System.out.println("Tamanho inválido. Informar de 1 a 9!");
-			return;
+			}
+
+			new Losango().desenhaLosango(numero);
+
+		} catch (Exception e) {
+
+			System.out
+					.println("Erro. N�mero inv�lido.\nExemplo: java Losango <n�mero inteiro>");
 
 		}
-		new Recursivo().desenhaLosango(numero);
 
 	}
 
@@ -32,7 +39,8 @@ public class Recursivo {
 	private void desenhaLosango(int n) {
 		// contador de caracteres que formarão a figura.
 		int contador = 0;
-		// controlador de incremetação e decrementação do contador que formará a
+		// controlador de incremetação e decrementação do contador que
+		// formará a
 		// figura.
 		boolean meio = false;
 		// configurando o valor passado pelo usuário
@@ -83,8 +91,8 @@ public class Recursivo {
 	}
 
 	/**
-	 * Método responsável em armazenar o valor passado pelo usuário se o aributo
-	 * n for 0(zero). for 0.
+	 * Método responsável em armazenar o valor passado pelo usuário se o
+	 * aributo n for 0(zero). for 0.
 	 * 
 	 * @param n
 	 */
