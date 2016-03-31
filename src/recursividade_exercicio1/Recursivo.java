@@ -4,19 +4,19 @@ public class Recursivo {
 
 	private int linha = 0; // contador de linhas
 
-	private int n; // total de repetiÁıes passado pelo usu·rio
+	private int n; // total de repeti√ß√µes passado pelo usu√°rio
 
-	// controle de decrementaÁ„o de linha. Invers„o do tri‚ngulo
+	// controle de decrementa√ß√£o de linha. Invers√£o do tri√¢ngulo
 	private boolean decrementaLinha;
 
 	public static void main(String args[]) {
 
 		int numero = 9;
 
-		// validaÁ„o de entrada de valores para limitar valores entre 1 e 9.
+		// valida√ß√£o de entrada de valores para limitar valores entre 1 e 9.
 		if (numero < 0 || numero > 9) {
 
-			System.out.println("Tamanho inv·lido. Informar de 1 a 9!");
+			System.out.println("Tamanho inv√°lido. Informar de 1 a 9!");
 			return;
 
 		}
@@ -25,68 +25,65 @@ public class Recursivo {
 	}
 
 	/**
-	 * MÈtodo recursivo para desenhar o Losango
+	 * M√©todo recursivo para desenhar o Losango
 	 * 
 	 * @param n
 	 */
 	private void desenhaLosango(int n) {
-		// contador de caracteres que formar„o a figura.
+		// contador de caracteres que formar√£o a figura.
 		int contador = 0;
-		// controlador de incremetaÁ„o e decrementaÁ„o do contador que formar· a
+		// controlador de incremeta√ß√£o e decrementa√ß√£o do contador que formar√° a
 		// figura.
 		boolean meio = false;
-		// configurando o valor passado pelo usu·rio
+		// configurando o valor passado pelo usu√°rio
 		setN(n);
-		// Loop de repetiÁ„o.
-		while (linha >= 0) {
 
-			for (int i = 0; i <= this.n + linha; i++) {
-				// condiÁ„o para marcar os espaÁos em branco.
-				if (i < (this.n - linha) || i > this.n + linha) {
+		for (int i = 0; i <= this.n + linha; i++) {
+			// condi√ß√£o para marcar os espa√ßos em branco.
+			if (i < (this.n - linha) || i > this.n + linha) {
 
-					System.out.print(" ");
-					// condiÁ„o para desenhar a figura.
-				} else {
-					// desenhando a figura
-					if (contador > linha || meio == true) {
-						// decrementaÁ„o do contador, caractere que formar· a
-						// figura.
-						contador--;
-						meio = true;
+				System.out.print(" ");
+				// condi√ß√£o para desenhar a figura.
+			} else {
+				// desenhando a figura
+				if (contador > linha || meio == true) {
+					// decrementa√ß√£o do contador, caractere que formar√° a
+					// figura.
+					contador--;
+					meio = true;
 
-					} else
-						// decrementaÁ„o do contador, caractere que formar· a
-						// figura.
-						contador++;
+				} else
+					// decrementa√ß√£o do contador, caractere que formar√° a
+					// figura.
+					contador++;
 
-					System.out.print(contador);
-
-				}
+				System.out.print(contador);
 
 			}
-			// pulando para a prÛxima linha
-			System.out.println();
-
-			// marcaÁ„o do meio do losango
-			if (linha == this.n - 1)
-				this.decrementaLinha = true;
-
-			// incrementando ou decrementando o losango conforme a marcaÁ„o do
-			// meio.
-			if (!decrementaLinha)
-				linha++;
-			else
-				linha--;
-
-			// chamada recursiva deste mÈtodo
-			desenhaLosango(linha);
 
 		}
+		// pulando para a pr√≥xima linha
+		System.out.println();
+
+		// marca√ß√£o do meio do losango
+		if (linha == this.n - 1)
+			this.decrementaLinha = true;
+
+		// incrementando ou decrementando o losango conforme a marca√ß√£o do
+		// meio.
+		if (!decrementaLinha)
+			linha++;
+		else
+			linha--;
+
+		if (linha >= 0)
+			// chamada recursiva deste mÔøΩtodo
+			desenhaLosango(linha);
 
 	}
 
 	/**
-	 * MÈtodo respons·vel em armazenar o valor passado pelo usu·rio se o aributo
+	 * M√©todo respons√°vel em armazenar o valor passado pelo usu√°rio se o aributo
 	 * n for 0(zero). for 0.
 	 * 
 	 * @param n
