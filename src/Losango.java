@@ -1,3 +1,9 @@
+/**
+ * Classe com método recursivo para fazer desenho na figura de Losango.
+ * 
+ * @author
+ *
+ */
 public class Losango {
 
 	private int linha = 0; // contador de linhas
@@ -13,9 +19,9 @@ public class Losango {
 			int numero = new Integer(args[0]);
 			// validação de entrada de valores para limitar valores entre 1 e
 			// 9.
-			if (numero < 0 || numero > 9) {
+			if (numero < 1 || numero > 9) {
 
-				System.out.println("Tamanho inválido. Informar de 1 a 9!");
+				System.out.println("Numero invalido. Informar de 1 a 9!");
 				return;
 
 			}
@@ -25,7 +31,7 @@ public class Losango {
 		} catch (Exception e) {
 
 			System.out
-					.println("Erro. N�mero inv�lido.\nExemplo: java Losango <n�mero inteiro>");
+					.println("Erro! Informar parametro numerico ao programa.\nExemplo: java Losango <numero inteiro>");
 
 		}
 
@@ -91,8 +97,8 @@ public class Losango {
 	}
 
 	/**
-	 * Método responsável em armazenar o valor passado pelo usuário se o
-	 * aributo n for 0(zero). for 0.
+	 * Método responsável em armazenar o valor passado pelo usuário se o aributo
+	 * n for 0(zero). for 0.
 	 * 
 	 * @param n
 	 */
